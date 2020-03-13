@@ -1,0 +1,61 @@
+10:01 $ git pull 
+Fusion automatique de README.md
+CONFLIT (contenu) : Conflit de fusion dans README.md
+La fusion automatique a échoué ; réglez les conflits et validez le résultat.
+✘-1 ~/workspace/github4 [master|MERGING ↓·1↑·1|✖ 1] 
+10:02 $ git pull
+error: Impossible de tirer car vous avez des fichiers non fusionnés.
+astuce: Corrigez-les puis lancez 'git add/rm <fichier>'
+astuce: si nécessaire pour marquer la résolution et valider.
+fatal: Abandon à cause de conflit non résolu.
+✘-128 ~/workspace/github4 [master|MERGING ↓·1↑·1|✖ 1] 
+10:04 $ git status
+Sur la branche master
+Votre branche et 'origin/master' ont divergé,
+et ont 1 et 1 commits différents chacune respectivement.
+  (utilisez "git pull" pour fusionner la branche distante dans la vôtre)
+
+Vous avez des chemins non fusionnés.
+  (réglez les conflits puis lancez "git commit")
+  (utilisez "git merge --abort" pour annuler la fusion)
+
+Chemins non fusionnés :
+  (utilisez "git add <fichier>..." pour marquer comme résolu)
+
+	modifié des deux côtés :  README.md
+
+aucune modification n'a été ajoutée à la validation (utilisez "git add" ou "git commit -a")
+✔ ~/workspace/github4 [master|MERGING ↓·1↑·1|✖ 1] 
+10:05 $ git add README.md
+✔ ~/workspace/github4 [master|MERGING ↓·1↑·1|✔] 
+10:05 $ git status
+Sur la branche master
+Votre branche et 'origin/master' ont divergé,
+et ont 1 et 1 commits différents chacune respectivement.
+  (utilisez "git pull" pour fusionner la branche distante dans la vôtre)
+
+Tous les conflits sont réglés mais la fusion n'est pas terminée.
+  (utilisez "git commit" pour terminer la fusion)
+
+✔ ~/workspace/github4 [master|MERGING ↓·1↑·1|✔] 
+10:05 $ git commit -m "undate ok"
+[master b528d9e] undate ok
+✔ ~/workspace/github4 [master ↑·2|✔] 
+10:07 $ git status
+Sur la branche master
+Votre branche est en avance sur 'origin/master' de 2 commits.
+  (utilisez "git push" pour publier vos commits locaux)
+
+rien à valider, la copie de travail est propre
+✔ ~/workspace/github4 [master ↑·2|✔] 
+10:07 $ git push 
+Décompte des objets: 4, fait.
+Delta compression using up to 4 threads.
+Compression des objets: 100% (2/2), fait.
+Écriture des objets: 100% (4/4), 365 bytes | 365.00 KiB/s, fait.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:yuyangyyy/github4.git
+   0333d46..b528d9e  master -> master
+✔ ~/workspace/github4 [master|✔] 
+10:08 $ 
